@@ -1,0 +1,57 @@
+.panel {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: $gutter-md;
+    margin-top: $gutter-md;
+    *:first-of-type {
+        border-top-left-radius: 3px;
+        border-top-right-radius: 3px;
+    }
+    *:last-of-type {
+        border-bottom-left-radius: 3px;
+        border-bottom-right-radius: 3px;
+    }
+    .title, .body, .footer {
+        width: 100%;
+    }
+    .title {
+        padding: $gutter-sm;
+    }
+    .body {
+        padding: $gutter-lg $gutter-sm;
+    }
+    .footer {
+        padding: $gutter-sm;
+    }
+    @each $key, $color in $colors {
+        &.#{$key} {
+            * {
+                border-right: solid 1px darken( $color, 10% );
+                border-left: solid 1px darken( $color, 10% );
+            }
+            *:first-of-type {
+                border-top: solid 1px darken( $color, 10% );
+            }
+            *:last-of-type {
+                border-bottom: solid 1px darken( $color, 10% );
+            }
+            *:nth-child(1n) {
+                border-bottom: solid 1px darken( $color, 10% );
+            }
+            .title, .body, .footer {
+                border-collapse: collapse;
+                box-sizing: border-box;
+            }
+            .title {
+                background-color: lighten( $color, 10% );
+            }
+            .body {
+                background-color: lighten( $color, 20% );
+            }
+            .footer {
+                background-color: lighten( $color, 10% );
+            }
+        }
+    }
+}

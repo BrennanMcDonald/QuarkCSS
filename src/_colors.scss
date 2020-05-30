@@ -1,0 +1,5 @@
+@each $key, $color in $colors {
+    .bg-#{$key} {
+        background-color: $color;
+    }
+}

@@ -1,8 +1,3 @@
-body {    
-    padding:0;
-    margin:0;
-}
-
 * {
     box-sizing: border-box;
 }
@@ -22,3 +17,21 @@ body {
 
 // Typography
 @import './typography';
+
+// Header
+@import './header';
+
+// Panels
+@import './panel';
+
+// Forms
+@import './forms';
+
+// Misc
+@import './misc';
+
+body {    
+    padding:0;
+    margin:0;
+    background-color: map-get($colors, offWhite);
+}

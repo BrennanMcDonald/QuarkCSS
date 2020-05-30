@@ -26,13 +26,42 @@ $textSize: (
 $gridMax: 12;
 $gridGaps: 10px, 20px, 30px, 40px, 50px, 60px;
 
+// Gutters
+$gutter-sm: 10px;
+$gutter-md: 15px;
+$gutter-lg: 20px;
+
+// Widths
+
+$widths: (
+  1: 1px,
+  5: 5px,
+  10: 10px,
+  20: 20px,
+  25: 25px,
+  50: 50px,
+  75: 75px,
+  100: 100px,
+  150: 150px,
+  200: 200px,
+  250: 250px,
+);
+
+$directions: (
+  l: left,
+  r: right,
+  t: top,
+  b: bottom
+);
+
 $colors: (
-  primary: #ff0000,
-  secondary: #00ff00,
-  warn: #ff0000,
-  error: #fff000,
-  success: #ff0f00,
-  black: #000,
+  primary: #3f84e5,
+  secondary: #ef626c,
+  warn: #ff6201,
+  error: #ff0f00,
+  success: #058c42,
+  black: #22181c,
   white: #fff,
-  grey: #353535
+  offWhite: #fbfaf8,
+  grey: #312f2f,
 );

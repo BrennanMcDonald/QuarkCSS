@@ -8,6 +8,7 @@ const cleanCSS = require('gulp-clean-css');
 gulp.task('scss', () => {
     return gulp.src('src/**/*.scss')
         .pipe(sass().on('error', sass.logError))
+        .pipe(cleanCSS({ compatibility: 'ie8' }))
         .pipe(gulp.dest('./build/'));
 });
 
@@ -15,7 +16,7 @@ gulp.task('minify-css', () => {
     return gulp.src('build/*.css')
         .pipe(gulpCopy('./'))
         .pipe(cleanCSS({ compatibility: 'ie8' }))
-        .dest(destination);
+        .dest('build');
 });
 
 gulp.task('styles', gulp.series(['scss']))

@@ -11,7 +11,7 @@ $font-main: "Manrope", sans-serif;
     #{$elem} {
         font-size: $fontSize;
         font-weight: 500;
-        margin: 20px 0px;
+        margin: $gutter-lg 0px;
         color: map-get($colors, grey)
     }
 }

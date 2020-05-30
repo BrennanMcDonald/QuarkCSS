@@ -1,0 +1,18 @@
+@each $key, $size in $textSize {
+    #{$key}.header {
+        font-size: $size;
+        position: relative;
+        padding-left: $gutter-sm;
+        &:after {
+            content: " ";
+            background-color: map-get($colors, grey);
+            position: absolute;
+            content: '';
+            height: 1px;
+            bottom: -4px; 
+            margin: 0 auto;
+            left: 0;
+            right: 0;
+        }
+    }
+}
