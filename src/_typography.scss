@@ -1,3 +1,23 @@
-.a {
-    color:red;
+@import url("../fonts/Manrope-VariableFont_wght.ttf");
+
+//store it in variable first
+$font-main: "Manrope", sans-serif;
+
+* {
+    font-family: $font-main;
+}
+
+@each $elem, $fontSize in $textSize {
+    #{$elem} {
+        font-size: $fontSize;
+        font-weight: 500;
+        margin: 20px 0px;
+        color: map-get($colors, grey)
+    }
+}
+
+@each $align in $align-v {
+    .text-#{$align} {
+        text-align: $align;
+    }
 }

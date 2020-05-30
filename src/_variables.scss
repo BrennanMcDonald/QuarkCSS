@@ -8,7 +8,31 @@ $breakpoints: (
   uw: 2000px,
 );
 
+// Alignments
+$align-v: left, right, center;
+$align-h: top, bottom, middle;
+
+// Text Sizes
+$textSize: (
+  h1: 40px,
+  h2: 36px,
+  h3: 30px,
+  h4: 24px,
+  h5: 18px,
+  h6: 16px,
+);
 
 // Grid sizes
 $gridMax: 12;
 $gridGaps: 10px, 20px, 30px, 40px, 50px, 60px;
+
+$colors: (
+  primary: #ff0000,
+  secondary: #00ff00,
+  warn: #ff0000,
+  error: #fff000,
+  success: #ff0f00,
+  black: #000,
+  white: #fff,
+  grey: #353535
+);

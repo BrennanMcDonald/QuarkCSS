@@ -3,6 +3,10 @@ body {
     margin:0;
 }
 
+* {
+    box-sizing: border-box;
+}
+
 .debug {
     border: solid 1px red;
 }

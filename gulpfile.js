@@ -3,12 +3,22 @@ const sass = require('gulp-sass');
 const del = require('del');
 const serve = require('gulp-serve');
 const gulpCopy = require('gulp-copy');
+const cleanCSS = require('gulp-clean-css');
 
-gulp.task('styles', () => {
+gulp.task('scss', () => {
     return gulp.src('src/**/*.scss')
         .pipe(sass().on('error', sass.logError))
         .pipe(gulp.dest('./build/'));
 });
+
+gulp.task('minify-css', () => {
+    return gulp.src('build/*.css')
+        .pipe(gulpCopy('./'))
+        .pipe(cleanCSS({ compatibility: 'ie8' }))
+        .dest(destination);
+});
+
+gulp.task('styles', gulp.series(['scss']))
 
 gulp.task('clean', () => {
     return del([
@@ -31,11 +41,11 @@ gulp.task('serve', serve('docs'));
 gulp.task('serve-build', serve(['docs', 'build']));
 
 gulp.task('serve-prod', serve({
-  root: ['docs', 'build'],
-  port: 80,
-  middleware: function(req, res) {
-    // custom optional middleware
-  }
+    root: ['docs', 'build'],
+    port: 80,
+    middleware: function (req, res) {
+        // custom optional middleware
+    }
 }));
 
 gulp.task('default', gulp.parallel(['watch', 'serve']));
