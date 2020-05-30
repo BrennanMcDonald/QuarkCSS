@@ -28,7 +28,7 @@ gulp.task('clean', () => {
 });
 
 gulp.task('copy', () => {
-    return gulp.src('build/main.css').pipe(gulpCopy('docs'));
+    return gulp.src('build/main.css').pipe(gulpCopy('./docs/css', { prefix: 1 }));
 })
 
 gulp.task('watch', () => {

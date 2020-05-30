@@ -12,6 +12,11 @@ input[type="text"] {
 }
 
 input[type='button'] {
+    border: solid 1px map-get($colors, grey);
+    width:100%;
+    padding: $gutter-sm $gutter-sm;
+    font-size: 15px;
+    border-radius: 5px;
     cursor: pointer;
     border: solid 1.5px darken(map-get($colors, primary), 40%);
     background-color: map-get($colors, primary);
