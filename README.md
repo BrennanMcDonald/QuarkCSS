@@ -1,5 +1,8 @@
 # QuarkCSS
-A micro css framework built on grid and flexbox.
+
+Current size: 15kb
+
+A micro css framework built on grid and flexbox. Currently feature incomplete but usable.
 
 Demo: https://brennanmcdonald.github.io/QuarkCSS/
 
