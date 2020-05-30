@@ -8,7 +8,11 @@ Demo: https://brennanmcdonald.github.io/QuarkCSS/
 
 ## Building
 
-QuarkCSS uses `gulpJS` as a build system. 
+QuarkCSS uses `gulpJS` as a build system.
+
+ - To build the minified styles run `gulp styles`
+ - To build the un-minified styles, run `gulp scss`
+ - To run the file watch and development server, run `gulp dev`
 
 ## Contributing
 

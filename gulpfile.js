@@ -31,7 +31,7 @@ gulp.task('copy', () => {
     return gulp.src('build/main.css').pipe(gulpCopy('./docs/css', { prefix: 1 }));
 })
 
-gulp.task('watch', () => {
+gulp.task('dev', () => {
     gulp.watch('src/**/*.scss', (done) => {
         gulp.series(['clean', 'styles', 'copy'])(done);
     });
