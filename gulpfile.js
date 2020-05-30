@@ -49,4 +49,4 @@ gulp.task('serve-prod', serve({
     }
 }));
 
-gulp.task('default', gulp.parallel(['watch', 'serve']));
+gulp.task('default', gulp.parallel(['dev', 'serve']));
