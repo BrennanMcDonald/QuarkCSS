@@ -1,0 +1,14 @@
+// Media Query Sizes
+$breakpoints: (
+  xs: 320px,
+  sm: 600px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  uw: 2000px,
+);
+
+
+// Grid sizes
+$gridMax: 12;
+$gridGaps: 10px, 20px, 30px, 40px, 50px, 60px;

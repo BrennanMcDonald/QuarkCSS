@@ -1,0 +1,41 @@
+.container {
+    margin-left:auto;
+    margin-right:auto;
+    left:0;right:0;
+}
+
+@include query(map-get($breakpoints, xs)) {
+    .container {
+        width:100%;
+    }
+}
+
+@include query(map-get($breakpoints, sm)) {
+    .container {
+        width:100%;
+    }
+}
+
+@include query(map-get($breakpoints, md)) {
+    .container {
+        width:500px;
+    }
+}
+
+@include query(map-get($breakpoints, lg)) {
+    .container {
+        width:700px;
+    }
+}
+
+@include query(map-get($breakpoints, xl)) {
+    .container {
+        width:1000px;
+    }
+}
+
+@include query(map-get($breakpoints, uw)) {
+    .container {
+        width:1500px;
+    }
+}

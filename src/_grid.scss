@@ -1,0 +1,17 @@
+.grid {
+    width: 100%;
+    @for $segment from 1 through $gridMax {
+        &.grid-#{$segment} {
+            column-count: $segment;
+        }
+    }
+    @for $segment from 1 through $gridMax {
+        @each $key, $size in $breakpoints {
+            @include query-max($size) {
+                &.grid-#{$key}-#{$segment} {
+                    column-count: $segment;
+                }
+            }
+        }
+    }
+}
