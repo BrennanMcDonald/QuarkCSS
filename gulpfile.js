@@ -19,7 +19,7 @@ gulp.task('minify-css', () => {
         .dest('build');
 });
 
-gulp.task('styles', gulp.series(['scss']))
+gulp.task('styles', gulp.series(['scss']));
 
 gulp.task('clean', () => {
     return del([
@@ -29,7 +29,7 @@ gulp.task('clean', () => {
 
 gulp.task('copy', () => {
     return gulp.src('build/main.css').pipe(gulpCopy('./docs/css', { prefix: 1 }));
-})
+});
 
 gulp.task('dev', () => {
     gulp.watch('src/**/*.scss', (done) => {

@@ -30,6 +30,7 @@ $gridGaps: 10px, 20px, 30px, 40px, 50px, 60px;
 $gutter-sm: 10px;
 $gutter-md: 15px;
 $gutter-lg: 20px;
+$gutter-xl: 30px;
 
 // Widths
 
@@ -55,13 +56,14 @@ $directions: (
 );
 
 $colors: (
-  primary: #3f84e5,
-  secondary: #ef626c,
-  warn: #ff6201,
-  error: #ff0f00,
-  success: #058c42,
-  black: #22181c,
+  primary: #2897ff,
+  secondary: #b8b8b8,
+  warn: #ffc107,
+  error: #dc3545,
+  success: #28a745,
+  black: #11050a,
   white: #fff,
   offWhite: #fbfaf8,
   grey: #312f2f,
+  lightGrey: #ced4da
 );

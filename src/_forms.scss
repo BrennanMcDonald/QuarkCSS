@@ -2,33 +2,138 @@ input[type="text"],
 input[type="password"],
 input[type="email"],
 input[type="phone"],
-input[type="text"] { 
-    border: solid 1px map-get($colors, grey);
-    width:100%;
+input[type="text"] {
+    border: solid 1px map-get($colors, lightGrey);
+    width: 100%;
     padding: $gutter-sm $gutter-sm;
     color: map-get($colors, grey);
     font-size: 15px;
     border-radius: 5px;
+    &:focus {
+        box-shadow: 0 0px 4px 0 map-get($colors, primary);
+    }
 }
 
-input[type='button'] {
-    border: solid 1px map-get($colors, grey);
-    width:100%;
-    padding: $gutter-sm $gutter-sm;
+input[type="checkbox"],
+input[type="radio"] {
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0 !important;
+    outline: 0;
+    z-index: 3;
+    width: 17px;
+    height: 17px;
+}
+
+input[type="button"] {
+    width: auto;
+    padding: $gutter-sm $gutter-xl;
     font-size: 15px;
     border-radius: 5px;
     cursor: pointer;
-    border: solid 1.5px darken(map-get($colors, primary), 40%);
+    border: none;
     background-color: map-get($colors, primary);
-    color: map-get($colors, black);
+    color: map-get($colors, white);
     font-weight: 600;
+    &.ghost {
+        border: solid 1.5px map-get($colors, primary);
+        background-color: rgba(0, 0, 0, 0);
+        color: map-get($colors, black);
+        transition: 0.3s;
+        &:hover {
+            background-color: map-get($colors, primary);
+        }
+    }
 }
 
-input[type='checkbox'] {
+input[type="checkbox"] {
     cursor: pointer;
     border: solid 1.5px darken(map-get($colors, primary), 40%);
     background-color: map-get($colors, primary);
     color: map-get($colors, black);
     font-weight: 600;
-    padding:2px;
+    padding: 2px;
+}
+
+.checkbox {
+    position: relative;
+    display: inline-block;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    outline: 0;
+    vertical-align: baseline;
+    font-style: normal;
+    min-height: 17px;
+    font-size: 1rem;
+    line-height: 17px;
+    input {
+        cursor: pointer;
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0 !important;
+        outline: 0;
+        z-index: -1;
+        width: 17px;
+        height: 17px;
+    }
+    label {
+        cursor: auto;
+        position: relative;
+        display: block;
+        padding-left: 1.85714em;
+        outline: 0;
+        font-size: 1em;
+        color: rgba(0, 0, 0, 0.87);
+        -webkit-transition: color 0.1s ease;
+        transition: color 0.1s ease;
+        &:before {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 17px;
+            height: 17px;
+            content: "";
+            background: #fff;
+            border-radius: 0.21428571rem;
+            -webkit-transition: border 0.1s ease, opacity 0.1s ease, -webkit-transform 0.1s ease,
+                -webkit-box-shadow 0.1s ease;
+            transition: border 0.1s ease, opacity 0.1s ease, -webkit-transform 0.1s ease, -webkit-box-shadow 0.1s ease;
+            transition: border 0.1s ease, opacity 0.1s ease, transform 0.1s ease, box-shadow 0.1s ease;
+            transition: border 0.1s ease, opacity 0.1s ease, transform 0.1s ease, box-shadow 0.1s ease,
+                -webkit-transform 0.1s ease, -webkit-box-shadow 0.1s ease;
+            border: 1px solid #d4d4d5;
+        }
+    }
+}
+
+label {
+    display: inline-block;
+    margin-bottom: 0.2rem;
+    font-size: 0.95rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    text-align: left;
+}
+
+@each $key, $size in $textSize {
+    #{$key}.header {
+        font-size: $size;
+        position: relative;
+        padding-left: $gutter-sm;
+        &:after {
+            content: " ";
+            background-color: map-get($colors, grey);
+            position: absolute;
+            content: "";
+            height: 1px;
+            bottom: -4px;
+            margin: 0 auto;
+            left: 0;
+            right: 0;
+        }
+    }
 }

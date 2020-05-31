@@ -9,8 +9,25 @@
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
 
-// Width Modules
+.float-right {
+    float: right;
+}
 
+.float-left {
+    float: left;
+}
+
+.clearfix {
+    overflow: auto;
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+// Width Modules
 @each $key, $size in $widths {
     .w-#{$key} {
         width: $size;
